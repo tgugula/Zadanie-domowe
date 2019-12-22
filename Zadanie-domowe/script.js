@@ -58,4 +58,16 @@ window.onload = function () {
         totalPrice -= parseFloat(clickedElement.previousElementSibling.textContent);
         updateSum(totalPrice);
     };
+    
+    document.getElementById('basket').addEventListener('click', function (e) {
+    if (e.target.classList.contains('buy')) {
+        popup(e.target);
+    }
+});
+function popup() {
+    if (window.confirm('Czy chcesz nabyć zawartość koszyka?')) {
+        window.open ("index.html")
+    }
+
+};
 }
